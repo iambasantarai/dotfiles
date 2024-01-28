@@ -1,0 +1,19 @@
+#           _ _
+#      __ _| (_) __ _ ___  ___  ___
+#     / _` | | |/ _` / __|/ _ \/ __|
+#    | (_| | | | (_| \__ \  __/\__ \
+#     \__,_|_|_|\__,_|___/\___||___/
+#
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cdl='cd $1 && ls'
+alias ls='ls --color=auto'
+alias rm='rm -i'
+alias mkcd='mkcd_alias() { mkdir -p "$1" && cd "$1"; }; mkcd_alias'
+
+# execute tmux sessionizer
+bind '"\C-f":"./tmux-sessionizer.sh\n"'
+
+alias v="vim"
+alias nv="nvim"
