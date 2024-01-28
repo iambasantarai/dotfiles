@@ -1,0 +1,7 @@
+[user]
+	email = iambasantarai@gmail.com
+	name = iambasantarai
+[alias]
+	logtree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[core]
+	excludesfile = /home/basanta/.gitignore_global
