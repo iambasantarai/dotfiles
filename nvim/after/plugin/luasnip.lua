@@ -2,6 +2,9 @@ local ls = require("luasnip")
 
 local types = require("luasnip.util.types")
 
+local s = ls.snippet
+local fmt = require("luasnip.extras.fmt").fmt
+
 ls.config.set_config({
 	history = true,
 
@@ -18,24 +21,18 @@ ls.config.set_config({
 	},
 })
 
--- <c-j> is my expansion key
--- this will expand the current item or jump to the next item within the snippet.
 vim.keymap.set({ "i", "s" }, "<C-j>", function()
 	if ls.expand_or_jumpable() then
 		ls.expand_or_jump()
 	end
 end, { silent = true })
 
--- <c-k> is my jump backwards key.
--- this always moves to the previous item within the snippet
 vim.keymap.set({ "i", "s" }, "<C-k>", function()
 	if ls.jumpable(-1) then
 		ls.jump(-1)
 	end
 end, { silent = true })
 
--- <c-l> is selecting within a list of options.
--- This is useful for choice nodes
 vim.keymap.set("i", "<c-l>", function()
 	if ls.choice_active() then
 		ls.change_choice(1)
@@ -43,3 +40,32 @@ vim.keymap.set("i", "<c-l>", function()
 end)
 
 vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"))
+
+-- SNIPPETS
+-- MIT License
+ls.add_snippets("text", {
+    s("mit", fmt([[
+    MIT License
+
+    Copyright (c) 2023 Basanta Rai
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    ]]
+    , {}))
+})
