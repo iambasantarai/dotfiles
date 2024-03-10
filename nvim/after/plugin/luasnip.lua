@@ -1,9 +1,11 @@
 local ls = require("luasnip")
+local s = ls.snippet
+local i = ls.insert_node
+local extras = require("luasnip.extras")
+local rep = extras.rep
+local fmt = require("luasnip.extras.fmt").fmt
 
 local types = require("luasnip.util.types")
-
-local s = ls.snippet
-local fmt = require("luasnip.extras.fmt").fmt
 
 ls.config.set_config({
 	history = true,
@@ -68,4 +70,32 @@ ls.add_snippets("text", {
     SOFTWARE.
     ]]
     , {}))
+})
+
+-- js/ts log
+local languages = {"javascript", "typescript"}
+
+for _, lang in ipairs(languages) do
+    ls.add_snippets(lang, {
+        s("log", fmt(
+        [[
+        console.log("::: {} :::");
+        console.log({});
+        console.log("::: {} :::");
+        ]], {
+                i(1), i(0), rep(1)
+            }))
+    })
+end
+
+ls.add_snippets("c", {
+    s("log", fmt(
+        [[
+        printf("\n=== uwu ===\n");
+        printf({});
+        printf("\n=== uwu ===\n");
+        ]], {
+            i(0)
+        }
+    ))
 })
