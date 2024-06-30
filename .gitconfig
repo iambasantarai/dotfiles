@@ -1,0 +1,9 @@
+[user]
+	email = iambasantarai@gmail.com
+	name = iambasantarai
+[alias]
+	logtree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[init]
+	defaultBranch = main
+[merge]
+	conflictStyle = diff3
