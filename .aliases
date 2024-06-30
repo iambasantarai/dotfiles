@@ -1,0 +1,13 @@
+#----------#
+# .aliases #
+#----------#
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cdl='cd $1 && ls'
+alias ls='ls --color=auto'
+alias rm='rm -i'
+alias mkcd='mkcd_alias() { mkdir -p "$1" && cd "$1"; }; mkcd_alias'
+
+alias v="vim"
+alias nv="nvim"
