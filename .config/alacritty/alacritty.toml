@@ -20,15 +20,15 @@ instance = "Alacritty"
 size = 9
 
 [font.bold]
-family = "Jet Brains Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "Jet Brains Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Jet Brains Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [cursor.style]
