@@ -9,8 +9,6 @@ Neovim serves as my primary text editor.
 
 Ensure that you have `git` and `stow` installed on your system:
 
-#### Git
-
 ```bash
 sudo xbps-install git stow -y
 ```
