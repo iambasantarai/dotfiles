@@ -197,8 +197,8 @@ focus_follows_mouse no
 # Set wallpaper
 exec_always feh --bg-scale -r -z $HOME/Pictures/wallpapers
 
-# Open firefox
-bindsym $mod+b exec firefox
+# Open chromium
+bindsym $mod+b exec chromium
 
 # Launch picom
 exec_always --no-startup-id picom 
