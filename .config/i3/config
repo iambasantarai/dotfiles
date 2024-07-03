@@ -239,7 +239,7 @@ set $mantle #1e2030
 set $crust #181926
 
 # target                 title     bg    text   indicator  border
-client.focused           $lavender $base $text  $rosewater $lavender
+client.focused           $lavender $blue $base  $base      $base
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
 client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
@@ -249,16 +249,18 @@ client.background        $base
 # Bar
 bar {
     colors {
-        background         $base
-        statusline         $text
-        separator          $text
-        focused_statusline $text
-        focused_separator  $base
-        focused_workspace  $base $base $green
-        active_workspace   $base $base $blue
-        inactive_workspace $base $base $surface1
-        urgent_workspace   $base $base $surface1
-        binding_mode       $base $base $surface1
+        background          $base
+        statusline          $text
+        separator           $base
+        focused_statusline  $text
+        focused_separator   $text
+
+        # colorclass        border     bg           text
+        focused_workspace   $base      $blue        $base
+        active_workspace    $base      $base        $blue
+        inactive_workspace  $base      $surface1    $text
+        urgent_workspace    $base      $base        $surface1
+        binding_mode        $base      $base        $surface1
     }
 
     position top
