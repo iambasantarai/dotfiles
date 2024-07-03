@@ -22,5 +22,7 @@ index=$(shuf -i 0-$((${#PROMPTS[@]}-1)) -n 1)
 ignition=${PROMPTS[$index]}
 PS1='\e[1;36m\w\e[0m \e[0;32m$ignition\e[0m '
 
-# Aliases
-source ~/.aliases
+# Alias definitions
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi

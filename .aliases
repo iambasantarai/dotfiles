@@ -4,8 +4,9 @@
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias cdl='cd $1 && ls'
-alias ls='ls -lah --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -lahF --color=auto'
+alias grep='grep --color=auto'
 alias mkcd='mkcd_alias() { mkdir -p "$1" && cd "$1"; }; mkcd_alias'
 
 alias v="vim"
