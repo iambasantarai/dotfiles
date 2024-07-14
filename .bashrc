@@ -26,3 +26,5 @@ PS1='\e[1;36m\w\e[0m \e[0;32m$ignition\e[0m '
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+. "$HOME/.cargo/env"
