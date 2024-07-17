@@ -5,13 +5,15 @@ mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
+	    "gopls",
+	    "jsonls",
 	    "rust_analyzer",
-        "clangd",
         "cssls",
         "html",
         "lua_ls",
-        "tsserver",
         "marksman",
+        "tailwindcss",
+        "tsserver",
     },
     automatic_installation = true
 })
