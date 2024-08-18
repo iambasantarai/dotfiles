@@ -38,6 +38,14 @@ Initialize and update the git submodules:
 git submodule update --init --recursive
 ```
 
+### Manage user directories
+
+Install `xdg-utils`, `xdg-user-dirs` and generate "well known" user directories
+
+```bash
+xdg-user-dirs-update
+```
+
 ### Configure touchpad
 
 Configure touchpad in x11 (X Window System)
@@ -55,11 +63,4 @@ Configure touchpad in x11 (X Window System)
 - Reboot the system
   ```bash
   sudo reboot
-  ```
-
-### Manage user directories
-
-- Install `xdg-utils`, `xdg-user-dirs` and generate "well known" user directories
-  ```bash
-  xdg-user-dirs-update
   ```
