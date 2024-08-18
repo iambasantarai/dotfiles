@@ -37,3 +37,21 @@ Initialize and update the git submodules:
 ```bash
 git submodule update --init --recursive
 ```
+
+### Configure touchpad
+
+Configure touchpad in x11 (X Window System)
+
+- Create a `xorg.conf.d` directory
+  ```bash
+  sudo mkdir /etc/X11/xorg.conf.d
+  ```
+
+- Add configuration file
+  ```bash
+  sudo ~/dotfiles/cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+  ```
+- Reboot the system
+  ```bash
+  sudo reboot
+  ```
