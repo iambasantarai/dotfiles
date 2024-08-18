@@ -57,7 +57,7 @@ Configure touchpad in x11 (X Window System)
 
 - Add configuration file
   ```bash
-  sudo ~/dotfiles/cp 90-touchpad.conf /etc/X11/xorg.conf.d/
+  sudo cp ~/dotfiles/90-touchpad.conf /etc/X11/xorg.conf.d/
   ```
 
 - Reboot the system
