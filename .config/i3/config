@@ -195,7 +195,7 @@ bindsym $mod+r mode "resize"
 focus_follows_mouse no
 
 # Set wallpaper
-exec_always feh --bg-scale -r -z $HOME/Pictures/wallpapers
+exec_always feh --bg-scale -r -z $HOME/dotfiles/wallpapers
 
 # Open chromium
 bindsym $mod+b exec chromium
