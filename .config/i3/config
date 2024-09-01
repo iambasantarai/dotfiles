@@ -192,24 +192,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-focus_follows_mouse no
-
-# Set wallpaper
-exec_always feh --bg-scale -r -z $HOME/dotfiles/wallpapers
-
-# Open chromium
-bindsym $mod+b exec chromium
-
-# Launch picom
-exec_always --no-startup-id picom 
-
-# Take Screenshot with flameshot
-bindsym Print exec flameshot screen -p $HOME/Pictures/Screenshots/
-bindsym shift+Print exec flameshot gui
-
-# Lock screen
-bindsym $mod+shift+x exec i3lock -c 24273a
-
 # Catppuccin theme
 set $rosewater #f4dbd6
 set $flamingo #f0c6c6
@@ -266,3 +248,21 @@ bar {
     position top
     status_command i3status --config $HOME/.config/i3/i3status.conf
 }
+
+focus_follows_mouse no
+
+# Set wallpaper
+exec_always feh --bg-scale -r -z $HOME/dotfiles/wallpapers
+
+# Open chromium
+bindsym $mod+b exec chromium
+
+# Launch picom
+# exec_always --no-startup-id picom 
+
+# Take Screenshot with flameshot
+bindsym Print exec flameshot screen -p $HOME/Pictures/Screenshots/
+bindsym shift+Print exec flameshot gui
+
+# Lock screen
+bindsym $mod+shift+x exec i3lock -c 24273a
