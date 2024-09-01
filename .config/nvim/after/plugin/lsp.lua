@@ -27,7 +27,7 @@ local signs = {
 
 -- Configure language servers
 local language_servers =
-	{ "gopls", "tsserver", "cssls", "html", "rust_analyzer", "tailwindcss", "svelte", "marksman", "jsonls", "pyright" }
+	{ "gopls", "tsserver", "cssls", "html", "rust_analyzer", "tailwindcss", "svelte", "marksman", "jsonls", "pyright", "svelte" }
 
 for _, language_server in ipairs(language_servers) do
 	lspconfig[language_server].setup({

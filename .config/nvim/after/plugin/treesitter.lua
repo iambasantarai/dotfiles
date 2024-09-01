@@ -14,13 +14,10 @@ require("nvim-treesitter.configs").setup({
 		"json",
 		"javascript",
 		"lua",
-		"rust",
 		"yaml",
 		"markdown",
-		"haskell",
 		"sql",
 		"svelte",
-		"python",
 	},
 	autotag = {
 		enable = true,
