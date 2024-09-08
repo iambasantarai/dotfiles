@@ -24,7 +24,7 @@ PROMPTS=(
 )
 index=$(shuf -i 0-$((${#PROMPTS[@]}-1)) -n 1)
 prompt=${PROMPTS[$index]}
-PS1='\e[1;36m\w\e[0m \e[0;32m$prompt\e[0m '
+PS1='\[\e[1;36m\]\w\[\e[0m\] \[\e[0;32m\]$prompt\[\e[0m\] '
 
 # Alias definitions
 if [ -f ~/.aliases ]; then
