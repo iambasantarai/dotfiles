@@ -8,8 +8,16 @@
 # Basic bash settings
 export EDITOR="nvim"
 export TERMINAL="alacritty"
+
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+
+# correct minor errors in the spelling of a directory component 
 shopt -s cdspell
 complete -d cd
+
+# append to the history file, dont overwrite it
+shopt -s histappend
 
 # check the window size after each command and, if necessarey
 # update the values of LINES and COLUMNS.
