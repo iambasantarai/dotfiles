@@ -14,6 +14,7 @@ mason_lspconfig.setup({
         "marksman",
         "tailwindcss",
         "tsserver",
+        "svelte"
     },
     automatic_installation = true
 })

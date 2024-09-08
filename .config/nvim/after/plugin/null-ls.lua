@@ -12,12 +12,18 @@ null_ls.setup({
         formatting.prettier,
         formatting.stylua,
         diagnostics.eslint_d,
+        formatting.gofumpt,
+        formatting.goimports_reviser,
+        formatting.golines
     },
 
     -- configure format on save
     on_attach = function(current_client, bufnr)
         if current_client.supports_method("textDocument/formatting") then
-            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_clear_autocmds({
+                group = augroup,
+                buffer = bufnr
+            })
             vim.api.nvim_create_autocmd("BufWritePre", {
                 group = augroup,
                 buffer = bufnr,
