@@ -51,11 +51,13 @@ xdg-user-dirs-update
 Configure touchpad in x11 (X Window System)
 
 - Create a `xorg.conf.d` directory
+
   ```bash
   sudo mkdir /etc/X11/xorg.conf.d
   ```
 
 - Add configuration file
+
   ```bash
   sudo cp ~/dotfiles/90-touchpad.conf /etc/X11/xorg.conf.d/
   ```
