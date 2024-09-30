@@ -29,7 +29,7 @@ vim.opt.cursorline = true
 
 -- appearance
 vim.opt.scrolloff = 8
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
@@ -55,5 +55,3 @@ vim.opt.undofile = true
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
-
-vim.g.mapleader = " "

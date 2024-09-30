@@ -46,7 +46,10 @@ vim.keymap.set("i", "<c-u>", require("luasnip.extras.select_choice"))
 -- SNIPPETS
 -- MIT License
 ls.add_snippets("text", {
-    s("mit", fmt([[
+	s(
+		"mit",
+		fmt(
+			[[
     MIT License
 
     Copyright (c) 2023 Basanta Rai
@@ -68,34 +71,47 @@ ls.add_snippets("text", {
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
-    ]]
-    , {}))
+    ]],
+			{}
+		)
+	),
 })
 
 -- js/ts log
-local languages = {"javascript", "typescript"}
+local languages = { "javascript", "typescript" }
 
 for _, lang in ipairs(languages) do
-    ls.add_snippets(lang, {
-        s("log", fmt(
-        [[
+	ls.add_snippets(lang, {
+		s(
+			"log",
+			fmt(
+				[[
         console.log("::: {} :::");
         console.log({});
         console.log("::: {} :::");
-        ]], {
-                i(1), i(0), rep(1)
-            }))
-    })
+        ]],
+				{
+					i(1),
+					i(0),
+					rep(1),
+				}
+			)
+		),
+	})
 end
 
 ls.add_snippets("c", {
-    s("log", fmt(
-        [[
+	s(
+		"log",
+		fmt(
+			[[
         printf("\n=== uwu ===\n");
         printf({});
         printf("\n=== uwu ===\n");
-        ]], {
-            i(0)
-        }
-    ))
+        ]],
+			{
+				i(0),
+			}
+		)
+	),
 })
