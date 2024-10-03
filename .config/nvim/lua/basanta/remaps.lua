@@ -50,8 +50,8 @@ vim.keymap.set("x", "<Leader>p", [["_dP]], opts)
 vim.keymap.set("n", "x", '"_x', opts)
 
 -- Window management
-vim.keymap.set("n", "<Leader>vs", "<C-w>v", opts) -- Split window vertically
-vim.keymap.set("n", "<Leader>hs", "<C-w>s", opts) -- Split window horizontally
+-- vim.keymap.set("n", "<Leader>vs", "<C-w>v", opts) -- Split window vertically
+-- vim.keymap.set("n", "<Leader>hs", "<C-w>s", opts) -- Split window horizontally
 vim.keymap.set("n", "<Leader>cs", "<cmd>close<CR>", opts) -- Close the current split window
 vim.keymap.set("n", "<Leader>es", "<C-w>=", opts) -- Make all split windows equal size
 
@@ -59,27 +59,28 @@ vim.keymap.set("n", "<Leader>es", "<C-w>=", opts) -- Make all split windows equa
 vim.keymap.set(
 	"n",
 	"<Leader>s",
-	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ noremap = true }
 )
 
 -- Make the current file executable
-vim.keymap.set("n", "<Leader>x", "<cmd>!chmod +x %<CR>")
+vim.keymap.set("n", "<Leader>x", "<cmd>!chmod +x %<CR>", { noremap = true })
 
 -- Resize splits with arrow keys
 -- These mappings allow resizing of split windows using the arrow keys for convenient window management.
-vim.keymap.set("n", "<Up>", "<cmd>resize -2<CR>", opts)
-vim.keymap.set("n", "<Down>", "<cmd>resize +2<CR>", opts)
-vim.keymap.set("n", "<Left>", "<cmd>vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<Right>", "<cmd>vertical resize +2<CR>", opts)
+-- vim.keymap.set("n", "<Up>", "<cmd>resize -2<CR>", opts)
+-- vim.keymap.set("n", "<Down>", "<cmd>resize +2<CR>", opts)
+-- vim.keymap.set("n", "<Left>", "<cmd>vertical resize -2<CR>", opts)
+-- vim.keymap.set("n", "<Right>", "<cmd>vertical resize +2<CR>", opts)
 
 -- Buffers
-vim.keymap.set("n", "<Leader>nb", "<cmd>bnext<CR>", opts) -- Move to the next buffer
-vim.keymap.set("n", "<Leader>pb", "<cmd>bprevious<CR>", opts) -- Move to the previous buffer
-vim.keymap.set("n", "<Leader>cb", "<cmd>Bdelete!<CR>", opts) -- Close the current buffer
-vim.keymap.set("n", "<Leader>ob", "<cmd>enew<CR>", opts) -- Open a new empty buffer
+-- vim.keymap.set("n", "<Leader>nb", "<cmd>bnext<CR>", opts) -- Move to the next buffer
+-- vim.keymap.set("n", "<Leader>pb", "<cmd>bprevious<CR>", opts) -- Move to the previous buffer
+-- vim.keymap.set("n", "<Leader>cb", "<cmd>Bdelete!<CR>", opts) -- Close the current buffer
+-- vim.keymap.set("n", "<Leader>ob", "<cmd>enew<CR>", opts) -- Open a new empty buffer
 
 -- Tabs
-vim.keymap.set("n", "<Leader>ot", "<cmd>tabnew<CR>", opts) -- Open a new tab
-vim.keymap.set("n", "<Leader>ct", "<cmd>tabclose<CR>", opts) -- Close the current tab
-vim.keymap.set("n", "<Leader>nt", "<cmd>tabn<CR>", opts) -- Move to the next tab
-vim.keymap.set("n", "<Leader>pt", "<cmd>tabp<CR>", opts) -- Move to the previous tab
+-- vim.keymap.set("n", "<Leader>ot", "<cmd>tabnew<CR>", opts) -- Open a new tab
+-- vim.keymap.set("n", "<Leader>ct", "<cmd>tabclose<CR>", opts) -- Close the current tab
+-- vim.keymap.set("n", "<Leader>nt", "<cmd>tabn<CR>", opts) -- Move to the next tab
+-- vim.keymap.set("n", "<Leader>pt", "<cmd>tabp<CR>", opts) -- Move to the previous tab
