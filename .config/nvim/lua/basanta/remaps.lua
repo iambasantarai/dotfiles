@@ -1,62 +1,85 @@
--- set leader key
+-- Set Leader key to space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- disable the spacebar key's default behavior in normal and visual modes
+-- Disable the spacebar key's default behavior in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
--- general keymaps
-vim.keymap.set("i", "jk", "<ESC>")
+local opts = { noremap = true, silent = true }
 
--- move selected
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- General keymaps
+vim.keymap.set("i", "jk", "<ESC>", opts) -- Exit insert mode by typing "jk"
 
-vim.keymap.set("n", "J", "mzJ`z")
+-- Save and quit keymaps
+vim.keymap.set("n", "<Leader>w", "<cmd>w<CR>", opts) -- Save the file
+vim.keymap.set("n", "<Leader>q", "<cmd>wq<CR>", opts) -- Save and quit
 
--- cursor in the middle
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
--- search and stay in center
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
--- paste
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- save and quit
-vim.keymap.set("n", "<Leader>w", ":w<CR>")
-vim.keymap.set("n", "<Leader>q", ":wq<CR>")
-
--- open netrw file explorer
+-- Open netrw file explorer in vertical split with a width of 30
 vim.keymap.set(
 	"n",
 	"<Leader>fe",
-	":wincmd v<bar> :Ex <bar> :vertical resize 30<CR>"
+	"<cmd>wincmd v<bar>Ex<bar>vertical resize 30<CR>",
+	opts
 )
 
--- splits navigation
-vim.keymap.set("n", "<Leader>h", ":wincmd h<CR>")
-vim.keymap.set("n", "<Leader>j", ":wincmd j<CR>")
-vim.keymap.set("n", "<Leader>k", ":wincmd k<CR>")
-vim.keymap.set("n", "<Leader>l", ":wincmd l<CR>")
+-- Navigation between split windows
+vim.keymap.set("n", "<Leader>h", "<cmd>wincmd h<CR>", opts) -- Move to the left split
+vim.keymap.set("n", "<Leader>j", "<cmd>wincmd j<CR>", opts) -- Move to the bottom split
+vim.keymap.set("n", "<Leader>k", "<cmd>wincmd k<CR>", opts) -- Move to the top split
+vim.keymap.set("n", "<Leader>l", "<cmd>wincmd l<CR>", opts) -- Move to the right split
 
--- close focused split
-vim.keymap.set("n", "<Leader>cs", ":close<CR>")
+-- Move selected text up and down in visual mode
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts) -- Move selected line(s) down
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts) -- Move selected line(s) up
 
--- make split windows equal width & height
-vim.keymap.set("n", "<Leader>es", "<C-w>=")
+-- Join lines without moving the cursor
+vim.keymap.set("n", "J", "mzJ`z", opts)
 
--- search and replace
+-- Scroll half-page and keep the cursor centered vertically
+vim.keymap.set("n", "<C-d>", "<C-d>zz", opts) -- Scroll down and center cursor
+vim.keymap.set("n", "<C-u>", "<C-u>zz", opts) -- Scroll up and center cursor
+
+-- Move to the next search result and keep the cursor centered
+vim.keymap.set("n", "n", "nzzzv", opts) -- Move to the next occurrence of search and center
+vim.keymap.set("n", "N", "Nzzzv", opts) -- Move to the previous occurrence of search and center
+
+-- Paste without overwriting the clipboard in visual mode
+vim.keymap.set("x", "<Leader>p", [["_dP]], opts)
+
+-- Delete the single character without copying into register
+vim.keymap.set("n", "x", '"_x', opts)
+
+-- Window management
+vim.keymap.set("n", "<Leader>vs", "<C-w>v", opts) -- Split window vertically
+vim.keymap.set("n", "<Leader>hs", "<C-w>s", opts) -- Split window horizontally
+vim.keymap.set("n", "<Leader>cs", "<cmd>close<CR>", opts) -- Close the current split window
+vim.keymap.set("n", "<Leader>es", "<C-w>=", opts) -- Make all split windows equal size
+
+-- Search and replace the word under the cursor globally with confirmation
 vim.keymap.set(
 	"n",
 	"<Leader>s",
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
 )
 
--- create an executable file
-vim.keymap.set("n", "<Leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- Make the current file executable
+vim.keymap.set("n", "<Leader>x", "<cmd>!chmod +x %<CR>")
 
--- toggle line wrapping
--- vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>")
+-- Resize splits with arrow keys
+-- These mappings allow resizing of split windows using the arrow keys for convenient window management.
+vim.keymap.set("n", "<Up>", "<cmd>resize -2<CR>", opts)
+vim.keymap.set("n", "<Down>", "<cmd>resize +2<CR>", opts)
+vim.keymap.set("n", "<Left>", "<cmd>vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<Right>", "<cmd>vertical resize +2<CR>", opts)
+
+-- Buffers
+vim.keymap.set("n", "<Leader>nb", "<cmd>bnext<CR>", opts) -- Move to the next buffer
+vim.keymap.set("n", "<Leader>pb", "<cmd>bprevious<CR>", opts) -- Move to the previous buffer
+vim.keymap.set("n", "<Leader>cb", "<cmd>Bdelete!<CR>", opts) -- Close the current buffer
+vim.keymap.set("n", "<Leader>ob", "<cmd>enew<CR>", opts) -- Open a new empty buffer
+
+-- Tabs
+vim.keymap.set("n", "<Leader>ot", "<cmd>tabnew<CR>", opts) -- Open a new tab
+vim.keymap.set("n", "<Leader>ct", "<cmd>tabclose<CR>", opts) -- Close the current tab
+vim.keymap.set("n", "<Leader>nt", "<cmd>tabn<CR>", opts) -- Move to the next tab
+vim.keymap.set("n", "<Leader>pt", "<cmd>tabp<CR>", opts) -- Move to the previous tab
