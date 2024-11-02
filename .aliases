@@ -13,7 +13,7 @@ alias mkcd='mkcd_alias() { mkdir -p "$1" && cd "$1"; }; mkcd_alias'
 alias v="vim"
 alias nv="nvim"
 
-alias shutdown='sudo /sbin/shutdown -h now'
+alias shutdown='sudo /sbin/shutdown -h now "Bye!"'
 
 # show open ports
 alias ports='netstat -tulanp'
