@@ -75,3 +75,10 @@ vim.o.backspace = "indent,eol,start" -- Configure backspace behavior
 vim.g.netrw_browse_split = 0 -- Open netrw in the current window
 vim.g.netrw_banner = 0 -- Disable the netrw banner
 vim.g.netrw_winsize = 25 -- Set netrw window size
+
+-- Make neovim recognize files with the .http extension
+vim.filetype.add({
+	extension = {
+		["http"] = "http",
+	},
+})

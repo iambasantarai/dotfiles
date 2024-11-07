@@ -73,4 +73,7 @@ require("lazy").setup({
 
 	-- treesitter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+	-- rest client interface
+	"mistweaverco/kulala.nvim",
 })
