@@ -58,7 +58,7 @@ return {
 				}),
 			})
 
-			local on_attach = function(client, bufnr)
+			local on_attach = function(bufnr)
 				local opts = { buffer = bufnr, remap = false }
 
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under the cursor
