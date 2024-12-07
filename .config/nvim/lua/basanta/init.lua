@@ -1,3 +1,3 @@
 require("basanta.options")
-require("basanta.remaps")
+require("basanta.keymaps")
 require("basanta.lazy")
