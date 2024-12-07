@@ -12,7 +12,7 @@ local language_servers = {
     "sqlls",
     "svelte",
     "tailwindcss",
-    "tsserver",
+    "ts_ls",
     "yamlls",
 }
 
@@ -58,8 +58,9 @@ return {
                 }),
             })
 
-            local opts = { buffer = bufnr, remap = false }
             local on_attach = function(client, bufnr)
+                local opts = { buffer = bufnr, remap = false }
+
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under the cursor
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- go to definition
                 vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts) -- go to implementations
@@ -84,7 +85,7 @@ return {
                 on_attach = on_attach,
                 settings = {
                     Lua = {
-                        runtime = { version = "Lua 5.1" },
+                        runtime = { version = "LuaJIT" },
                         diagnostics = {
                             globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
                         },
@@ -97,7 +98,7 @@ return {
 
     {
         "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
+        dependencies = { "williamboman/mason-lspconfig.nvim" },
 
         config = function()
             require("mason").setup()

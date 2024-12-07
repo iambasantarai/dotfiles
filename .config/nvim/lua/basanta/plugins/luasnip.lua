@@ -10,6 +10,8 @@ return {
             local fmt = require("luasnip.extras.fmt").fmt
             local types = require("luasnip.util.types")
 
+            require("luasnip.loaders.from_vscode").lazy_load()
+
             ls.config.set_config({
                 history = true,
 
