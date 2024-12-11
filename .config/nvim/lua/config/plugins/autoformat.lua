@@ -8,11 +8,9 @@ return {
 		config = function()
 			local null_ls = require("null-ls")
 			local formatting = null_ls.builtins.formatting
-			local diagnostics = null_ls.builtins.diagnostics
 
 			require("mason-null-ls").setup({
 				ensure_installed = {
-					"eslint_d",
 					"gofumpt",
 					"goimports_reviser",
 					"golines",
@@ -29,7 +27,6 @@ return {
 
 			null_ls.setup({
 				sources = {
-					diagnostics.eslint_d,
 					formatting.gofumpt,
 					formatting.golines,
 					formatting.goimports_reviser,
