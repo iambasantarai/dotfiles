@@ -12,7 +12,7 @@ export TERMINAL="alacritty"
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
-# correct minor errors in the spelling of a directory component 
+# correct minor errors in the spelling of a directory component
 shopt -s cdspell
 complete -d cd
 
@@ -30,7 +30,7 @@ PROMPTS=(
     "∯"
     "≎"
 )
-index=$(shuf -i 0-$((${#PROMPTS[@]}-1)) -n 1)
+index=$(shuf -i 0-$((${#PROMPTS[@]} - 1)) -n 1)
 prompt=${PROMPTS[$index]}
 PS1='\[\e[1;36m\]\w\[\e[0m\] \[\e[0;32m\]$prompt\[\e[0m\] '
 
@@ -43,3 +43,7 @@ fi
 # golang
 export PATH=$PATH:/usr/bin/go
 export PATH=$PATH:$HOME/go/bin
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
