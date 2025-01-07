@@ -23,10 +23,10 @@ vim.keymap.set(
 )
 
 -- Navigation between split windows
-vim.keymap.set("n", "<Leader>h", "<cmd>wincmd h<CR>", opts) -- Move to the left split
-vim.keymap.set("n", "<Leader>j", "<cmd>wincmd j<CR>", opts) -- Move to the bottom split
-vim.keymap.set("n", "<Leader>k", "<cmd>wincmd k<CR>", opts) -- Move to the top split
-vim.keymap.set("n", "<Leader>l", "<cmd>wincmd l<CR>", opts) -- Move to the right split
+vim.keymap.set("n", "<Leader>h", "<cmd>wincmd h<CR>", opts) -- Move focus to the left split
+vim.keymap.set("n", "<Leader>j", "<cmd>wincmd j<CR>", opts) -- Move focus to the bottom split
+vim.keymap.set("n", "<Leader>k", "<cmd>wincmd k<CR>", opts) -- Move focus to the top split
+vim.keymap.set("n", "<Leader>l", "<cmd>wincmd l<CR>", opts) -- Move focus to the right split
 
 -- Move selected text up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts) -- Move selected line(s) down
