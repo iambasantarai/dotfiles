@@ -10,31 +10,31 @@ return {
 			})
 			vim.keymap.set(
 				"n",
-				"<Leader>rr",
+				"<Leader>kr",
 				"<cmd>lua require('kulala').run()<CR>",
 				opts
 			)
 			vim.keymap.set(
 				"n",
-				"<Leader>rt",
+				"<Leader>kt",
 				"<cmd>lua require('kulala').toggle_view()<CR>",
 				opts
 			)
 			vim.keymap.set(
 				"n",
-				"<Leader>rp",
+				"<Leader>kp",
 				"<cmd>lua require('kulala').jump_prev()<CR>",
 				opts
 			)
 			vim.keymap.set(
 				"n",
-				"<Leader>rn",
+				"<Leader>kn",
 				"<cmd>lua require('kulala').jump_next()<CR>",
 				opts
 			)
 			vim.keymap.set(
 				"n",
-				"<Leader>cr",
+				"<Leader>kc",
 				"<cmd>lua require('kulala').copy()<CR>",
 				opts
 			)
