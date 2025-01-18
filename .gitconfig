@@ -9,9 +9,7 @@
 	excludesfile = ~/dotfiles/personal/git-configs/.gitignore_global
 [alias]
 	logtree = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[includeIf "gitdir:~/Work/amnil/cwd/"]
+[includeIf "gitdir:~/Work/amnil/"]
     path = ~/dotfiles/personal/git-configs/.gitconfig_amnil_gitlab
 [includeIf "gitdir:~/Work/frost/"]
     path = ~/dotfiles/personal/git-configs/.gitconfig_frost_gitlab
-[includeIf "gitdir:~/Work/amnil/cadblox/"]
-    path = ~/dotfiles/personal/git-configs/.gitconfig_amnil_github
