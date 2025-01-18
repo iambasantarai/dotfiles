@@ -1,8 +1,9 @@
-personal
 .git
+personal
+scripts
+wallpapers
 
 ^/README.*
 .gitmodules
-90-touchpad.conf
-wallpapers
 .ubuntu_bashrc
+90-touchpad.conf
