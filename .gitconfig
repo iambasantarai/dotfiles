@@ -6,7 +6,7 @@
 [merge]
 	conflictStyle = diff3
 [core]
-	excludesfile = ~/dotfiles/personal/git-configs/.gitignore_global
+	excludesfile = /home/basanta/.gitignore_global
 [alias]
 	logtree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [includeIf "gitdir:~/Work/amnil/"]
