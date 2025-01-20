@@ -2,10 +2,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+local opts = { noremap = true, silent = true }
+
 -- Disable the spacebar key's default behavior in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
-
-local opts = { noremap = true, silent = true }
 
 -- General keymaps
 vim.keymap.set("i", "jk", "<ESC>", opts) -- Exit insert mode by typing "jk"
@@ -84,3 +84,6 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 -- vim.keymap.set("n", "<Leader>ct", "<cmd>tabclose<CR>", opts) -- Close the current tab
 -- vim.keymap.set("n", "<Leader>nt", "<cmd>tabn<CR>", opts) -- Move to the next tab
 -- vim.keymap.set("n", "<Leader>pt", "<cmd>tabp<CR>", opts) -- Move to the previous tab
+
+-- Delete whole word
+vim.keymap.set("n", "<C-BS>", "db", opts)
