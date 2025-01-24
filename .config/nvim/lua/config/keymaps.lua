@@ -10,6 +10,10 @@ vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 -- General keymaps
 vim.keymap.set("i", "jk", "<ESC>", opts) -- Exit insert mode by typing "jk"
 
+-- Delete whole word
+vim.keymap.set("i", "<C-BS>", "<C-w>", opts)
+vim.keymap.set("i", "<C-H>", "<C-w>", opts)
+
 -- Save and quit keymaps
 vim.keymap.set("n", "<Leader>w", "<cmd>w<CR>", opts) -- Save the file
 vim.keymap.set("n", "<Leader>q", "<cmd>wq<CR>", opts) -- Save and quit
@@ -84,6 +88,3 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<CR>", opts)
 -- vim.keymap.set("n", "<Leader>ct", "<cmd>tabclose<CR>", opts) -- Close the current tab
 -- vim.keymap.set("n", "<Leader>nt", "<cmd>tabn<CR>", opts) -- Move to the next tab
 -- vim.keymap.set("n", "<Leader>pt", "<cmd>tabp<CR>", opts) -- Move to the previous tab
-
--- Delete whole word
-vim.keymap.set("n", "<C-BS>", "db", opts)
