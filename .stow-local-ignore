@@ -6,4 +6,5 @@ wallpapers
 ^/README.*
 .gitmodules
 .ubuntu_bashrc
+.void_bashrc
 90-touchpad.conf
