@@ -36,14 +36,21 @@ return {
 			})
 		end,
 	},
+
 	{
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		event = { "BufReadPost", "BufNewFile" },
 		config = function()
-			require("treesitter-context").setup({
-				enable = true,
-			})
+			require("treesitter-context")
+
+			-- toggle treesitter-context
+			vim.keymap.set(
+				"n",
+				"<M-t>",
+				":TSContextToggle<CR>",
+				{ noremap = true, silent = true }
+			)
 		end,
 	},
 }
