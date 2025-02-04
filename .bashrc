@@ -3,7 +3,7 @@
 #----------#
 
 # Get OS ID
-OS_ID=$(grep -w "ID" /etc/os-release | cut -d= -f2 | tr -d '"')
+OS_ID=$(grep -w "ID" /etc/os-release | sed 's/ID="//;s/"//')
 
 # Load the corresponding bash configuration
 if [[ "$OS_ID" == "ubuntu" ]]; then
