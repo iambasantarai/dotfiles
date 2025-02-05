@@ -255,7 +255,7 @@ focus_follows_mouse no
 exec_always feh --bg-scale -r -z $HOME/dotfiles/wallpapers
 
 # Open chromium
-bindsym $mod+b exec chromium
+bindsym $mod+b exec $HOME/dotfiles/scripts/open-browser.sh
 
 # Launch picom
 # exec_always --no-startup-id picom 
