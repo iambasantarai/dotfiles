@@ -6,7 +6,7 @@
 OS_ID=$(grep -w "ID" /etc/os-release | cut -d= -f2 | tr -d '"')
 
 # Load the corresponding bash configuration
-if [[ "$OS_ID" == "ubuntu" ]]; then
+if [[ "$OS_ID" == "ubuntu" || "$OS_ID" == "pop" ]]; then
     source ~/dotfiles/.ubuntu_bashrc
 elif [[ "$OS_ID" == "void" ]]; then
     source ~/dotfiles/.void_bashrc
