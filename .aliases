@@ -32,3 +32,6 @@ alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
 # external monitor
 alias emon='./dotfiles/.screenlayout/multi-monitor.sh'
+
+# ttodo
+alias ttodo="./Code/ttodo/bin/ttodo"
