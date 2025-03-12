@@ -15,6 +15,7 @@ return {
 					"c",
 					"css",
 					"dockerfile",
+					"go",
 					"html",
 					"http",
 					"javascript",
