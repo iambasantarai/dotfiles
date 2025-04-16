@@ -1,0 +1,14 @@
+[window]
+decorations = "none"
+opacity = 0.9
+
+[window.padding]
+x = 2
+y = 2
+
+[font]
+size = 9
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
