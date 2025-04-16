@@ -48,6 +48,13 @@
       ];
     };
   };
+  
+  # Compositor
+  services.picom = {
+    enable = true;
+    backend = "glx";
+    fade = true;
+  };
 
   # Configure display manager 
   # ervices.xserver.xkb.layout = "us";
@@ -81,10 +88,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pcmanfm
     alacritty
+    btop
     curl
     git
+    pcmanfm
+    pfetch
     vim
     wget
   ];
