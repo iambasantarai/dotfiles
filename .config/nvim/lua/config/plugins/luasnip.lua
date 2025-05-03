@@ -86,7 +86,12 @@ return {
 				),
 			})
 
-			local languages = { "javascript", "typescript" }
+			local languages = {
+				"javascript",
+				"typescript",
+				"javascriptreact",
+				"typescriptreact",
+			}
 			for _, lang in ipairs(languages) do
 				ls.add_snippets(lang, {
 					ls.snippet(
