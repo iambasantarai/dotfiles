@@ -272,3 +272,6 @@ bindsym shift+Print exec flameshot gui
 
 # Lock screen
 bindsym $mod+shift+x exec i3lock -c 24273a
+
+# Setup displays
+exec --no-startup-id xrandr --output eDP1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --brightness 0.80 --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output DP2 --off --output DP3 --off --output DP4 --off && notify-send "Display Setup" "Displays configured successfully"
