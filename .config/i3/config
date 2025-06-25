@@ -44,8 +44,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use brightnessctl to adjust brightness
-bindsym XF86MonBrightnessUp exec  brightnessctl -d 'intel_backlight' set 10%+
-bindsym XF86MonBrightnessDown exec brightnessctl -d 'intel_backlight' set 10%-
+bindsym XF86MonBrightnessUp exec  brightnessctl -d 'intel_backlight' set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl -d 'intel_backlight' set 5%-
 
 # ++++++++++++ VOID ++++++++++++ 
 # Use amixer to adjust volume in alsa - VOID.
@@ -225,7 +225,7 @@ set $mantle #1e2030
 set $crust #181926
 
 # target                 title     bg    text   indicator  border
-client.focused           $lavender $blue $base  $base      $base
+client.focused           $blue     $blue $base  $base      $base
 client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
 client.unfocused         $overlay0 $base $text  $rosewater $overlay0
 client.urgent            $peach    $base $peach $overlay0  $peach
