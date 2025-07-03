@@ -98,9 +98,9 @@ return {
 						"log",
 						fmt(
 							[[
-        console.log("::: {} :::");
+        console.log("::: {} start :::");
         console.log({});
-        console.log("::: {} :::");
+        console.log("::: {} end :::");
         ]],
 							{
 								ls.insert_node(1),
