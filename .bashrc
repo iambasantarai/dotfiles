@@ -2,16 +2,8 @@
 # .bashrc  #
 #----------#
 
-# Get OS ID
-OS_ID=$(grep -w "ID" /etc/os-release | cut -d= -f2 | tr -d '"')
-
-# Load the corresponding bash configuration
-if [[ "$OS_ID" == "ubuntu" || "$OS_ID" == "pop" ]]; then
-    source ~/dotfiles/.ubuntu_bashrc
-elif [[ "$OS_ID" == "void" ]]; then
-    source ~/dotfiles/.void_bashrc
-else
-    echo "No specific bashrc found for OS: $OS_ID"
+if [ -f ~/dotfiles/.void_bashrc ]; then
+    . ~/dotfiles/.void_bashrc
 fi
 
 # Alias definitions
