@@ -35,7 +35,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 24273a --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# ++++++++++++ UBUNTU/POP_OS ++++++++++++ 
 # Use pactl to adjust volume in PulseAudio
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -46,16 +45,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use brightnessctl to adjust brightness
 bindsym XF86MonBrightnessUp exec  brightnessctl -d 'intel_backlight' set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl -d 'intel_backlight' set 5%-
-
-# ++++++++++++ VOID ++++++++++++ 
-# Use amixer to adjust volume in alsa - VOID.
-# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q sset Master 5%+
-# bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q sset Master 5%-
-# bindsym XF86AudioMute exec --no-startup-id amixer -q sset Master toggle
-
-# Use xbacklight to adjust brightness
-# bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
-# bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
