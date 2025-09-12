@@ -1,6 +1,3 @@
--- Set leader key to space
-vim.g.mapleader = " "
-
 -- Disable the spacebar key's default behavior in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
