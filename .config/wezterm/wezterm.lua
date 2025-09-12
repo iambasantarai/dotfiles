@@ -26,6 +26,11 @@ config = {
             mods = "CMD",
             action = wezterm.action.CloseCurrentPane { confirm = false },
         },
+        {
+            key = "f",
+            mods = "CTRL",
+            action = wezterm.action.ToggleFullScreen,
+        },
     }
 }
 
