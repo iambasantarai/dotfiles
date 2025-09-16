@@ -1,7 +1,7 @@
 local opts = { noremap = true, silent = true }
 
 -- General keymaps
-vim.keymap.set({ "i", "v" }, "<C-e>", "<ESC>", opts)
+vim.keymap.set({ "i", "v" }, "ee", "<ESC>", opts)
 vim.keymap.set("n", "<Leader>w", "<cmd>w<CR>", opts)
 vim.keymap.set("n", "<Leader>q", "<cmd>wq<CR>", opts)
 
