@@ -3,7 +3,11 @@ vim.opt.termguicolors = true
 vim.opt.fileencoding = "utf-8"
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
-vim.opt.background = "dark"
+vim.opt.backspace = "indent,eol,start"
+vim.opt.completeopt = "menuone,noselect"
+vim.opt.shortmess:append("c")
+vim.opt.iskeyword:append("-")
+vim.opt.formatoptions:remove({ "c", "r", "o" })
 
 -- Line numbers
 vim.opt.number = true
@@ -20,9 +24,10 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 -- UI
+vim.opt.background = "dark"
+vim.opt.colorcolumn = "80"
 vim.opt.showmode = true
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -38,6 +43,3 @@ vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-
--- Backspace settings
-vim.opt.backspace = "indent,eol,start"
