@@ -1,16 +1,17 @@
 local opts = { noremap = true, silent = true }
 
 -- General keymaps
-vim.keymap.set({ "i", "v" }, "jk", "<ESC>", opts)
+vim.keymap.set({ "i", "v" }, "<C-e>", "<ESC>", opts)
 vim.keymap.set("n", "<Leader>w", "<cmd>w<CR>", opts)
 vim.keymap.set("n", "<Leader>q", "<cmd>wq<CR>", opts)
 
 -- Open netrw file explorer in vertical split with a width of 30
 vim.keymap.set("n", "<Leader>fe", "<cmd>wincmd v<bar>Ex<bar>vertical resize 30<CR>", opts)
+vim.keymap.set("n", "<leader>ff", ":find ", { noremap = true })
 
 -- Move selected text up and down in visual mode
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 
 -- Join lines without moving the cursor
 vim.keymap.set("n", "J", "mzJ`z", opts)
@@ -26,7 +27,6 @@ vim.keymap.set("n", "N", "Nzzzv", opts)
 -- Paste without overwriting the clipboard in visual mode
 vim.keymap.set("x", "<Leader>p", [["_dP]], opts)
 
-
 -- Delete the single character without copying into register
 vim.keymap.set("n", "x", '"_x', opts)
 
@@ -38,7 +38,6 @@ vim.keymap.set("n", "<Leader>l", "<cmd>wincmd l<CR>", opts)
 
 -- Split management
 vim.keymap.set("n", "<Leader>vs", "<C-w>v", opts)
-vim.keymap.set("n", "<Leader>hs", "<C-w>s", opts)
 vim.keymap.set("n", "<Leader>cs", "<cmd>close<CR>", opts)
 vim.keymap.set("n", "<Leader>es", "<C-w>=", opts)
 
