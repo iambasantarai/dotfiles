@@ -14,7 +14,7 @@ config = {
     enable_tab_bar = false,
     window_padding = {
         left = 4,
-        right = 4,
+        right = 0,
         top = 2,
         bottom = 0
     },
