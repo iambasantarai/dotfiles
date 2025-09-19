@@ -16,7 +16,7 @@ config = {
         left = 4,
         right = 4,
         top = 2,
-        bottom = 2
+        bottom = 0
     },
 
     -- Key bindings 
