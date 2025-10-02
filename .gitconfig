@@ -1,0 +1,9 @@
+[user]
+	name = Basanta Rai
+	email = developer.basanta@gmail.com
+[init]
+    defaultBranch = main
+[merge]
+    conflictStyle = diff3
+[alias]
+    logtree = log --graph --decorate --pretty=oneline --abbrev-commit --all
