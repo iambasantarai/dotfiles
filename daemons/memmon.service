@@ -1,0 +1,14 @@
+[Unit]
+Description=Memory Monitor Daemon
+After=network.target
+
+[Service]
+ExecStart=/home/ebpearls/dotfiles/scripts/scream.sh
+Restart=always
+User=ebpearls
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=memory-monitor
+
+[Install]
+WantedBy=multi-user.target
