@@ -4,6 +4,3 @@ vim.g.maplocalleader = " "
 
 -- Netrw settings
 vim.g.netrw_banner = 0
-
--- Colorscheme
-vim.cmd.colorscheme("habamax")

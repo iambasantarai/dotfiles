@@ -1,17 +1,22 @@
 local opts = { noremap = true, silent = true }
 
 -- General keymaps
-vim.keymap.set({ "i", "v" }, "ee", "<ESC>", opts)
+vim.keymap.set("i", "jk", "<ESC>", opts)
 vim.keymap.set("n", "<Leader>w", "<cmd>w<CR>", opts)
 vim.keymap.set("n", "<Leader>q", "<cmd>wq<CR>", opts)
 
 -- Open netrw file explorer in vertical split with a width of 30
-vim.keymap.set("n", "<Leader>fe", "<cmd>wincmd v<bar>Ex<bar>vertical resize 30<CR>", opts)
+vim.keymap.set(
+	"n",
+	"<Leader>fe",
+	"<cmd>wincmd v<bar>Ex<bar>vertical resize 30<CR>",
+	opts
+)
 vim.keymap.set("n", "<leader>ff", ":find ", { noremap = true })
 
 -- Move selected text up and down in visual mode
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 
 -- Join lines without moving the cursor
 vim.keymap.set("n", "J", "mzJ`z", opts)
