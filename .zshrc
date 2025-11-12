@@ -10,3 +10,6 @@ if [ -f ~/.aliases ]; then
 fi
 
 export PATH=$PATH:~/go/bin
+
+# ghcup-env
+[ -f "/Users/basanta/.ghcup/env" ] && . "/Users/basanta/.ghcup/env"
